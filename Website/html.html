@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="hero-banner">
+        <h1>Welcome to My Website</h1>
+        <p>Explore my portfolio of stunning photography</p>
+    </div>
+
+    <section class="content-section">
+        <h2>About Me</h2>
+        <p>Im a Photographer that lives in calgary, my passion for night sky photography fuels his determination to master the craft, as i eagerly awaits each clear night to venture out into the darkness, armed with his camera and a sense of wonder.</p>
+    </section>
+
+    <section class="card-section">
+        <h2>Portfolio</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/IMG_4772.jpg" alt="SAIT">
+                <div class="card-overlay">
+                    <h3>Photo 1</h3>
+                    <p>SAIT Campus</p>
+                    <div class="card">
+                        <img src="images/IMG_4777.jpg" alt="Downtown">
+                        <div class="card-overlay">
+                            <h3>Photo 2</h3>
+                            <p>Down Town Calgary</p>
+                            <div class="card">
+                                <img src="images/IMG_4926.jpg" alt="Park">
+                                <div class="card-overlay">
+                                    <h3>Photo 3</h3>
+                                    <p>Park</p>
+                                    <div class="card">
+                                        <img src="images/IMG_4775.jpg" alt="Train Station">
+                                        <div class="card-overlay">
+                                            <h3>Photo 4</h3>
+                                            <p>Bridgeland Station</p>
+                                            <div class="card">
+                                                <img src="images/IMG_4774.jpg" alt="Downtown">
+                                                <div class="card-overlay">
+                                                    <h3>Photo 5</h3>
+                                                    <p>Downtown Caglary taken at SAIT</p>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <h2>FAQ</h2>
+        <div class="accordion">
+            <!-- Accordion items -->
+            <div class="accordion-item">
+                <button class="accordion-header">why is the sky not blue as seen from space?</button>
+                <div class="accordion-content">
+                    <p>Blue light is scattered more than the other colors because it travels as shorter, smaller waves.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+              var accordionHeaders = document.querySelectorAll('.accordion-header');
+
+// Loop through each header
+accordionHeaders.forEach(function(header) {
+    // Add click event listener to each header
+    header.addEventListener('click', function() {
+        // Toggle the display of the corresponding content
+        var content = this.nextElementSibling;
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+        } else {
+            content.style.display = 'block';
+        }
+    });
+});
+        </script>
+
+    </section>
+    <header>
+    <div class="video-container ">
+            <!-- Embedded video -->
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0FXJUP6_O1w?si=JxTFjUQmRKQ5rkGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>&copy; 2024 Your Photography Portfolio</p>
+    </footer>
+</body>
+</html>
