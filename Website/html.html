@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Photography Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="accordion.css">
+    <link rel="stylesheet" href="layout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="hero-banner">
@@ -20,65 +21,199 @@
         <h2>About Me</h2>
         <p>Im a Photographer that lives in calgary, my passion for night sky photography fuels his determination to master the craft, as i eagerly awaits each clear night to venture out into the darkness, armed with his camera and a sense of wonder.</p>
     </section>
-
-    <section class="card-section">
-        <h2>Portfolio</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="images/IMG_4772.jpg" alt="SAIT">
-                <div class="card-overlay">
-                    <h3>Photo 1</h3>
-                    <p>SAIT Campus</p>
-                    <div class="card">
-                        <img src="images/IMG_4777.jpg" alt="Downtown">
-                        <div class="card-overlay">
-                            <h3>Photo 2</h3>
-                            <p>Down Town Calgary</p>
-                            <div class="card">
-                                <img src="images/IMG_4926.jpg" alt="Park">
-                                <div class="card-overlay">
-                                    <h3>Photo 3</h3>
-                                    <p>Park</p>
-                                    <div class="card">
-                                        <img src="images/IMG_4775.jpg" alt="Train Station">
-                                        <div class="card-overlay">
-                                            <h3>Photo 4</h3>
-                                            <p>Bridgeland Station</p>
-                                            <div class="card">
-                                                <img src="images/IMG_4774.jpg" alt="Downtown">
-                                                <div class="card-overlay">
-                                                    <h3>Photo 5</h3>
-                                                    <p>Downtown Caglary taken at SAIT</p>
-        </div>
-    </section>
-
-    <section class="accordion-section">
-        <h2>FAQ</h2>
-        <div class="accordion">
-            <!-- Accordion items -->
-            <div class="accordion-item">
-                <button class="accordion-header">why is the sky not blue as seen from space?</button>
-                <div class="accordion-content">
-                    <p>Blue light is scattered more than the other colors because it travels as shorter, smaller waves.</p>
-                </div>
+    <h1>My Image Gallery</h1>
+</header>
+<head>
+<style>
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+    
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+    
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/IMG_4772.jpg">
+                <img src="images/IMG_4772.jpg" alt="Heritage Hall" width="600" height="400">
+              </a>
+              <div class="desc">i took this photo while heading home from an event at sait</div>
             </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/IMG_4774.jpg">
+                <img src="images/IMG_4774.jpg" alt="city" width="600" height="400">
+              </a>
+              <div class="desc">this was a picture i took in sait</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/IMG_4775.jpg">
+                <img src="images/IMG_4775.jpg" alt="moon" width="600" height="400">
+              </a>
+              <div class="desc">This was a picture i took at night of the beautiful moon</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/IMG_4777.jpg">
+                <img src="images/IMG_4777.jpg" alt="downtown calgary" width="600" height="400">
+              </a>
+              <div class="desc">this was a picture i took at downtown calgary</div>
+            </div>
+
+            <style>
+                body {margin:25px;}
+                
+                div.polaroid {
+                  width: 80%;
+                  background-color: white;
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                  margin-bottom: 25px;
+                }
+                
+                div.container {
+                  text-align: center;
+                  padding: 10px 20px;
+                }
+          </style>
+           <h1>My favourite photo</h1>
+            <div class="polaroid">
+            <img src="images/IMG_4926.jpg" alt="sunny sky" style="width:100%">
+            <div class="container">
+            <p>this was a picture i took while walking in the park</p>
+            </div>
+          </div>
+          
+          
+          <div class="clearfix"></div>
+        
+          <div style="padding: 10px;">
+
+          </div>
+               
+    </body>
+
+    <style> 
+
+        .accordion {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+          }
+          
+          .accordion-item {
+            border-bottom: 1px solid #ffffff;
+            margin-bottom: 10px;
+          }
+          
+          .accordion-btn {
+            width: 100%;
+            padding: 15px;
+            text-align: left;
+            background-color: #e09494;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+          }
+          
+          .accordion-content {
+            padding: 10px 0;
+            display: none;
+          }
+          
+          .accordion-item.active .accordion-content {
+            display: block;
+          } </style>
+  </div>
+    </section>
+    <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn">Question 1: why is the sky not blue as seen from space?</button>
+          <div class="accordion-content">
+            <p>Blue light is scattered more than the other colors because it travels as shorter, smaller waves.</p>
+          </div>
         </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">Question 2: What camera do i use?</button>
+          <div class="accordion-content">
+            <p>Iphone 13 Pro Max</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">Question 3: What is your inspiration to take photos</button>
+          <div class="accordion-content">
+            <p>i have no inspiration i just see a beautiful scenery and took a photo of it</p>
+          </div>
+        </div>
+      </div>
 
         <script>
-              var accordionHeaders = document.querySelectorAll('.accordion-header');
+      document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
 
-// Loop through each header
-accordionHeaders.forEach(function(header) {
-    // Add click event listener to each header
-    header.addEventListener('click', function() {
-        // Toggle the display of the corresponding content
-        var content = this.nextElementSibling;
+    accordionItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const content = this.querySelector('.accordion-content');
         if (content.style.display === 'block') {
-            content.style.display = 'none';
+          content.style.display = 'none';
         } else {
-            content.style.display = 'block';
-        }
+          content.style.display = 'block';
+      }
     });
+  });
 });
         </script>
 
@@ -92,7 +227,24 @@ accordionHeaders.forEach(function(header) {
         </div>
     </header>
     <footer>
-        <p>&copy; 2024 Your Photography Portfolio</p>
+        <p>&copy; 2024 Justin's Photography Portfolio</p>
     </footer>
 </body>
+</div>
+<section class="footer-container">
+    <!-- Remove and add footer HTML -->
+    <div class="remove-assignment-content">
+      <h1>Footer</h1>
+      <div class="footer-content">
+        <div class="footer-links">
+            <ul>
+                <p class="copyright">
+                  &copy; <span id="2024"></span> Justin Staana. All rights reserved. </p>
+            </ul>
+        </div>
+        <div id="map" class="map">
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160860.6192578702!2d-114.27215361061587!3d50.952436026708284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f9268a69e81%3A0xb1db5e68bd61e28!2sSouthern%20Alberta%20Institute%20of%20Technology!5e0!3m2!1sen!2sca!4v1712820848177!5m2!1sen!2sca" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
 </html>
